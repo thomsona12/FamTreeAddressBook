@@ -20,9 +20,22 @@ namespace FamTreeAddressBookGUI
     /// </summary>
     public partial class MainWindow : Window
     {
+        Contact contact = null;
         public MainWindow()
         {
             InitializeComponent();
         }
+        private void btnHelp_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                HelpWindow helpWindow = new HelpWindow();
+                helpWindow.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        } // end btnDraw_Click
     }
 }

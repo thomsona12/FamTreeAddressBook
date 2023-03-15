@@ -6,7 +6,22 @@
         xmlns:local="clr-namespace:FamTreeAddressBookGUI"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+    <Grid RenderTransformOrigin="0.5,0.5">
         <Label Content="Family Tree Address Book" HorizontalAlignment="Center" Height="26" Margin="0,2,0,0" VerticalAlignment="Top" Width="206" HorizontalContentAlignment="Center"/>
+        <GroupBox Grid.Column="2" HorizontalAlignment="Center" Height="400" Width="800" Margin="0,30,0,0" VerticalAlignment="Top">
+            <Grid HorizontalAlignment="Left" Height="400" Margin="0,0,0,0" VerticalAlignment="Top" Width="800">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Label Content="Contacts" HorizontalAlignment="Left" Height="26" Margin="25,1,0,0" VerticalAlignment="Top" Width="206"/>
+                <ListBox x:Name="lstContacts" HorizontalAlignment="Center" Height="350" Margin="0,27,0,0" VerticalAlignment="Top" Width="350"/>
+                <Label Content="Controls" Grid.Column="1" HorizontalAlignment="Center" Height="23" Margin="0" VerticalAlignment="Top" Width="55"/>
+                <Button x:Name="helpBtn" Content="Help Me" HorizontalAlignment="Center" Height="35" Margin="0,28,0,0" VerticalAlignment="Top" Width="185" Grid.Column="1" Click="btnHelp_Click" />
+                <Button x:Name="importBtn" Content="Import" HorizontalAlignment="Center" Height="35" Margin="0,68,0,0" VerticalAlignment="Top" Width="184" Grid.Column="1" />
+                <Button x:Name="addBtn" Content="Add Contact" HorizontalAlignment="Center" Height="35" Margin="0,108,0,0" VerticalAlignment="Top" Width="184" Grid.Column="1" />
+                <Button x:Name="closeBtn" Content="Close" HorizontalAlignment="Center" Height="35" Margin="0,355,0,0" VerticalAlignment="Top" Width="184" Grid.Column="1" />
+            </Grid>
+        </GroupBox>
     </Grid>
 </Window>
