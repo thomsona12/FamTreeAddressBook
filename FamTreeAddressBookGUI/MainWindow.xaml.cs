@@ -20,10 +20,11 @@ namespace FamTreeAddressBookGUI
     /// </summary>
     public partial class MainWindow : Window
     {
-        Contact contact = null;
+        public List<Contact> contacts;
         public MainWindow()
         {
             InitializeComponent();
+            contacts = new List<Contact>();
         }
         private void btnHelp_Click(object sender, RoutedEventArgs e)
         {
@@ -36,6 +37,48 @@ namespace FamTreeAddressBookGUI
             {
                 MessageBox.Show(ex.Message);
             }
-        } // end btnDraw_Click
+        } // end btnHelp_Click
+        private void btnAdd_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                AddWindow addWindow = new AddWindow(contacts);
+                addWindow.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        } // end btnAdd_Click
+        private void btnViewTree_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                FamilyTreeWindow familyTreeWindow = new FamilyTreeWindow();
+                familyTreeWindow.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        } // end btnViewTree_Click
+        private void btnEdit_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                EditWindow editWindow = new EditWindow();
+                editWindow.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        } // end btnEdit_Click
+
+        private void btnClose_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        } // end btnClose_Click
+
     }
 }

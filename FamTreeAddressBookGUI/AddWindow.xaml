@@ -7,6 +7,37 @@
         mc:Ignorable="d"
         Title="AddWindow" Height="450" Width="800">
     <Grid>
-        
+        <Label Content="Add Contact" Grid.Column="1" HorizontalAlignment="Center" Height="23" Margin="0" VerticalAlignment="Top" Width="80"/>
+        <GroupBox Grid.Column="2" HorizontalAlignment="Center" Height="400" Width="800" Margin="0,30,0,0" VerticalAlignment="Top">
+            <Grid HorizontalAlignment="Left" Height="400" Margin="0,0,0,0" VerticalAlignment="Top" Width="800">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Label Content="First Name:"  HorizontalAlignment="Left" Height="23" Margin="0" VerticalAlignment="Top" Width="90"/>
+                <TextBox x:Name="fNameTxt" HorizontalAlignment="Left" Height="35" Margin="0,28,0,0" VerticalAlignment="Top" Width="185" />
+                <Label Content="Last Name:"  HorizontalAlignment="Left" Height="23" Margin="2,68,0,0" VerticalAlignment="Top" Width="90"/>
+                <TextBox x:Name="lNameTxt" HorizontalAlignment="Left" Height="35" Margin="0,96,0,0" VerticalAlignment="Top" Width="185" />
+                <Label Content="Phone Num:"  HorizontalAlignment="Left" Height="23" Margin="0,136,0,0" VerticalAlignment="Top" Width="90"/>
+                <TextBox x:Name="pNumTxt" HorizontalAlignment="Left" Height="35" Margin="0,164,0,0" VerticalAlignment="Top" Width="185" />
+                <Label Content="Email:"  HorizontalAlignment="Left" Height="23" Margin="2,204,0,0" VerticalAlignment="Top" Width="90"/>
+                <TextBox x:Name="emailTxt" HorizontalAlignment="Left" Height="35" Margin="2,232,0,0" VerticalAlignment="Top" Width="185" />
+                <Label Content="Address:"  HorizontalAlignment="Left" Height="23" Margin="0,272,0,0" VerticalAlignment="Top" Width="90"/>
+                <TextBox x:Name="addressTxt" HorizontalAlignment="Left" Height="35" Margin="0,300,0,0" VerticalAlignment="Top" Width="185" />
+                <Label Content="Postal Code:"  HorizontalAlignment="Left" Height="23" Margin="215,0,0,0" VerticalAlignment="Top" Width="90"/>
+                <TextBox x:Name="pCodeTxt" HorizontalAlignment="Right" Height="35" Margin="0,28,0,0" VerticalAlignment="Top" Width="185" />
+                <Label Content="City:"  HorizontalAlignment="Left" Height="23" Margin="215,68,0,0" VerticalAlignment="Top" Width="90"/>
+                <TextBox x:Name="cityTxt"  HorizontalAlignment="Right" Height="35" Margin="0,96,0,0" VerticalAlignment="Top" Width="185" />
+                <Label Content="Province:"  HorizontalAlignment="Left" Height="23" Margin="215,136,0,0" VerticalAlignment="Top" Width="90"/>
+                <TextBox x:Name="provTxt" HorizontalAlignment="Right" Height="35" Margin="0,165,0,0" VerticalAlignment="Top" Width="185" />
+                <Label Content="Country:"  HorizontalAlignment="Left" Height="23" Margin="215,209,0,0" VerticalAlignment="Top" Width="90"/>
+                <TextBox x:Name="countryTxt" HorizontalAlignment="Right" Height="35" Margin="0,232,0,0" VerticalAlignment="Top" Width="185" />
+                <Label Content="Relationship:"  HorizontalAlignment="Left" Height="23" Margin="215,277,0,0" VerticalAlignment="Top" Width="90"/>
+                <TextBox x:Name="relTxt" HorizontalAlignment="Right" Height="35" Margin="0,300,0,0" VerticalAlignment="Top" Width="185" />
+                <Button x:Name="saveBtn" Content="Add Contact" HorizontalAlignment="Center" Height="34" Margin="0,12,0,0" VerticalAlignment="Top" Width="184" Grid.Column="1" Click="btnAdd_Click"/>
+                <Button x:Name="closeBtn" Content="Close" HorizontalAlignment="Center" Height="35" Margin="0,355,0,0" VerticalAlignment="Top" Width="184" Grid.Column="1" Click="btnClose_Click" />
+            </Grid>
+        </GroupBox>
+
     </Grid>
 </Window>
