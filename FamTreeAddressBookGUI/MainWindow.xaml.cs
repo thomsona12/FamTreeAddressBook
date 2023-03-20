@@ -66,7 +66,11 @@ namespace FamTreeAddressBookGUI
         {
             try
             {
-                EditWindow editWindow = new EditWindow();
+                if (EditWindow.IsOpen)
+                {
+                    return;
+                }
+                EditWindow editWindow = new EditWindow((Contact)lstContacts.SelectedItem);
                 editWindow.Show();
             }
             catch (Exception ex)

@@ -9,17 +9,17 @@ namespace FamTreeAddressBookGUI
     public class Contact
     {
         //vars
-        private string firstName { get; set; }
-        private string lastName { get; set; }
-        private string address { get; set; }
-        private string postalCode { get; set; }
-        private string city { get; set; }
-        private string country { get; set; }
-        private string province { get; set; }
-        private string email { get; set; }
+        public string firstName { get; private set; }
+        public string lastName { get; private set; }
+        public string address { get; private set; }
+        public string postalCode { get; private set; }
+        public string city { get; private set; }
+        public string country { get; private set; }
+        public string province { get; private set; }
+        public string email { get; private set; }
         //probably need different datatype
-        private string relationship { get; set; }
-        private string phoneNumber { get; set; }
+        public string relationship { get; private set; }
+        public string phoneNumber { get; private set; }
 
         public Contact()
         {
@@ -38,6 +38,11 @@ namespace FamTreeAddressBookGUI
             this.email = email;
             this.relationship = relationship;
             this.phoneNumber = phoneNumber;
+        }
+
+        public override string ToString()
+        {
+            return firstName + " " + lastName + ", " +relationship;
         }
     }
 }

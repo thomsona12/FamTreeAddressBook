@@ -32,6 +32,7 @@ namespace FamTreeAddressBookGUI
                 
                 Contact contact = new Contact(fNameTxt.Text, lNameTxt.Text, addressTxt.Text, pCodeTxt.Text, cityTxt.Text,countryTxt.Text, provTxt.Text, emailTxt.Text, relTxt.Text, pNumTxt.Text);
                 contacts.Add(contact);
+                ((MainWindow)Application.Current.MainWindow).lstContacts.Items.Insert(0,contact);
             }
             catch (Exception ex)
             {
